@@ -18,3 +18,6 @@ db.employees.insertOne({
   location: ["CA"],
   date: Date()
 });
+
+db.employees.deleteMany({ department: "admin" });
+
