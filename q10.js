@@ -1,9 +1,10 @@
+//1.
 db.employees.aggregate([
   { $sort: { salary: -1 } },
   { $limit: 3 },
   { $project: { _id: 0, name: 1, salary: 1 } }
 ]);
-//
+//2.
 db.employees.aggregate([
   {
     $project: {
@@ -14,7 +15,7 @@ db.employees.aggregate([
     }
   }
 ]);
-//
+//3.
 db.employees.aggregate([
   {
     $project: {
